@@ -1,6 +1,10 @@
 // array of questions for user
 const questions = [
-
+  {
+    type: "input",
+    name: "title",
+    message: "What is the title of your project?",
+  },
 ];
 
 // function to write README file

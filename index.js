@@ -42,16 +42,23 @@ const questions = [
 // console.log(questions);
 
 // function to write README file
-function writeToFile(fileName, data) {
-  generateMarkdown.fileName = fileName,
-  generateMarkdown.data = data,
-
+function writeToFile(fileName, data)  {
 }
 
 // function to initialize program
 function init() {
+  this.prompt(questions).then((response) => {
 
-  
+    fs.appendFileAsync("README.md"), + response + function(err) {
+
+      if (err){
+        console.log(err)
+      } else {
+        console.log("Success!")
+      }
+    }
+
+  })
 }
 
 // function call to initialize program

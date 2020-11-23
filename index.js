@@ -1,4 +1,6 @@
+const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const fs = require("fs");
 
 // array of questions for user
 const questions = [
@@ -20,7 +22,7 @@ const questions = [
   {
     type: "input",
     name: "usage",
-    message: "What is the usage fo~r your project?",
+    message: "What is the usage for your project?",
   },
   {
     type: "input",
@@ -35,6 +37,7 @@ const questions = [
   {
     type: "checkbox",
     name: "license",
+    choices: ["MIT", "Apache 2", "GPL 3.0", "BSD 3"],
     message: "What licenses is your project using?",
   },
 ];
@@ -42,21 +45,21 @@ const questions = [
 // console.log(questions);
 
 // function to write README file
-function writeToFile(fileName, data)  {
-}
+// function writeToFile(fileName, data)  {
+// }
 
 // function to initialize program
 function init() {
-  this.prompt(questions).then((response) => {
+  inquirer.prompt(questions).then((response) => {
 
-    fs.appendFileAsync("README.md"), + response + function(err) {
+    fs.writeFileSync("README.md", generateMarkdown(response), function(err) {
 
       if (err){
         console.log(err)
       } else {
         console.log("Success!")
       }
-    }
+    })
 
   })
 }

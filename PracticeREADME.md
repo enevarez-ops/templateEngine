@@ -1,5 +1,5 @@
 
-![Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=9cf)
+![Badge](https://img.shields.io/static/v1?label=License&message=&color=9cf)
 
 ### Table of Contents:
 * [Title](##-Title)
@@ -14,13 +14,10 @@
 README Generator
 
 ## Description:
-A README generator for future projects.
-
-## Demo:
-![TemplateEngine](templateEngine.gif)
+A generator for a README for any project.
 
 ## Installation:
-NPM install dependencies and run with node.
+NPM install dependencies and run under node. 
 
 ## Usage:
 To generate a README for future projects.
@@ -32,4 +29,4 @@ Efrain Nevarez
 N/A
 
 ## License(s):
-This project is licensed under MIT
+This project is licensed under 
